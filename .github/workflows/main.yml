@@ -34,10 +34,10 @@ jobs:
         cmd: install
         
     - name: Creating build
-      run: yarn build 
+      run: npm run-script build
       
     - name: Installing surge
-      run: npm install -g surge 
+      run: npm install -global surge 
       
     - name: Deploying On Surge
       run: surge ./build http://mysterious-sweater.surge.sh/ --token${{secrets.Surge_token}}
